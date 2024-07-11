@@ -95,19 +95,44 @@ public class CustomLinkedlist {
         size--;
         return val;
     }
-    public int deleteLast() {
-        if (size <= 1){
-            return deleteFirst();
-        }
+    // public int deleteLast() {
+    //     if (size <= 1){
+    //         return deleteFirst();
+    //     }
 
-        Node temp = head;
-        for (int i = 2; i < size; i++) {
-            temp = temp.next;
-        }     
-        int val = tail.value;
-        tail = temp;
-        temp.next =  null;
-        return val;
+    //     Node temp = head;
+    //     for (int i = 2; i < size; i++) {
+    //         temp = temp.next;
+    //     }     
+    //     int val = tail.value;
+    //     tail = temp;
+    //     temp.next =  null;
+    //     return val;
+    // }
+
+    //Deleting the last item via refference of the previouse node.
+
+    public int deleteLast() {
+        if (size == 0){
+            return -1;
+        }
+        else if(size == 1){
+            deleteFirst();
+        }
+       Node secondLast =  get(size - 2);
+       int val = tail.value;
+       tail = secondLast;
+       secondLast.next = null;
+       size --;
+       return val ; 
+    }
+
+    public Node get(int index){
+        Node node =  head ;
+        for(int i = 0; i < index ; i++){
+            node = node.next;
+        }
+        return node;
     }
 
     public int deleteAt(int index){

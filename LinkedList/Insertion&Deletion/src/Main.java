@@ -3,6 +3,7 @@ public class Main {
         CustomLinkedlist x = new CustomLinkedlist();
         // Insertion
         x.InsertAtFirst(10);
+        x.InsertAtFirst(100);
         x.InsertAtLast(20);
         x.InsertAtLast(30);
         x.InsertAtLast(40);
