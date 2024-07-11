@@ -122,7 +122,7 @@ public class CustomLinkedlist {
        Node secondLast =  get(size - 2);
        int val = tail.value;
        tail = secondLast;
-       secondLast.next = null;
+       tail.next = null;
        size --;
        return val ; 
     }
