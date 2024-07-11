@@ -38,6 +38,46 @@ public class Doubly {
         size ++;
     }
 
+    // method 2 - 
+    
+    public int DeleteAtLast(){
+        if (size <= 1){
+            return -1 ;
+        }
+        Node SecondLastNode  =  get(size - 2);
+        int val = SecondLastNode.next.value;
+        SecondLastNode.next= null;
+        size--;
+        return val;
+    }
+
+    public Node get(int index){
+        Node node = head;
+        for (int i = 0; i < index; i++) {
+            node = node.next;
+          }
+          return node;
+    }
+
+    //method 1 -
+    
+    // public int deleteAtlast(){
+    //     if (size <= 1){
+    //         return -1 ;
+    //     }
+    //     Node pre = null;
+    //     Node node =  head;
+    //     for (int i = 1; i < size; i++) {
+    //       node = node.next;
+    //     }
+    //     int val = node.value;
+    //     pre = node.prev;
+    //     pre.next = null;
+    //     size --;
+    //     return val;
+
+    // }
+
     public void display (){
         Node temp = head;
         Node last = null;
@@ -57,6 +97,4 @@ public class Doubly {
 
         System.out.println("START");
     }
-
-    
 }
