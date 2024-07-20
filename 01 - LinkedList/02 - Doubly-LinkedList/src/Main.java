@@ -10,5 +10,6 @@ public class Main {
         System.out.println("Deleted value is : "+a.DeleteAtLast());
         a.display();
         System.out.println("The size is : "+a.size);
+        a.PrintRev(); // reverse the nodes
     }
 }

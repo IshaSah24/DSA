@@ -31,7 +31,7 @@ public class Doubly {
             head.prev = node;  
         }
         else{
-            tail = node;
+            tail = node; // Not necessary because we are not handling the tail value anywhere expect this line....
         }
         head = node;
         head.prev = null;   
@@ -60,7 +60,7 @@ public class Doubly {
     }
 
     //method 1 -
-    
+
     // public int deleteAtlast(){
     //     if (size <= 1){
     //         return -1 ;
@@ -89,10 +89,27 @@ public class Doubly {
         }
         System.out.println("Null");
 
-        System.out.println("Printing in reverse...");
-        while(last != null){
-            System.out.print(last.value +" -> ");
-            last = last.prev;
+    //Method - 1
+        // System.out.println("Printing in reverse...");
+        // while(last != null){
+        //     System.out.print(last.value +" -> ");
+        //     last = last.prev;
+        // }
+
+        // System.out.println("START");
+    }
+
+    /*Method 2
+    ----------- for reversing the element using function*/
+
+    public void PrintRev(){
+        Node temp =  head;
+        while (temp.next != null){
+            temp =  temp.next;  // temp is pointing  to last node so no need to take extra  variable like we took in display (Node 'last') method for reversing the list of nodes.
+        }
+        while (temp != null){
+            System.out.print(temp.value+" -> ");
+            temp = temp.prev;
         }
 
         System.out.println("START");
