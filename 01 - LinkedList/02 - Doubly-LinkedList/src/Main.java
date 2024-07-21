@@ -6,10 +6,16 @@ public class Main {
         a.addAtfirst(15);
         a.addAtfirst(100);
         a.addAtfirst(7);
+        System.out.print("Inserted At First : ");
         a.display();
         System.out.println("Deleted value is : "+a.DeleteAtLast());
         a.display();
+        System.out.print("Reversed : ");
+        a.PrintRev();
+        System.out.print("Inserted at last : ");
+        a.insertAtLast(90);
+        a.insertAtLast(140);
+        a.display();
         System.out.println("The size is : "+a.size);
-        a.PrintRev(); // reverse the nodes
     }
 }

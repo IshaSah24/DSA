@@ -38,6 +38,25 @@ public class Doubly {
         size ++;
     }
 
+     //method 1 -
+
+    // public int deleteAtlast(){
+    //     if (size <= 1){
+    //         return -1 ;
+    //     }
+    //     Node pre = null;
+    //     Node node =  head;
+    //     for (int i = 1; i < size; i++) {
+    //       node = node.next;
+    //     }
+    //     int val = node.value;
+    //     pre = node.prev;
+    //     pre.next = null;
+    //     size --;
+    //     return val;
+
+    // }
+
     // method 2 - 
     
     public int DeleteAtLast(){
@@ -59,31 +78,32 @@ public class Doubly {
           return node;
     }
 
-    //method 1 -
+    public void insertAtLast(int val){
+        Node node = new Node (val);
+        Node last = head;
+        node.next =  null;
 
-    // public int deleteAtlast(){
-    //     if (size <= 1){
-    //         return -1 ;
-    //     }
-    //     Node pre = null;
-    //     Node node =  head;
-    //     for (int i = 1; i < size; i++) {
-    //       node = node.next;
-    //     }
-    //     int val = node.value;
-    //     pre = node.prev;
-    //     pre.next = null;
-    //     size --;
-    //     return val;
+        if (head == null){
+            head = node;
+            head.prev = null;
+            return; 
+        }
 
-    // }
+        while(last.next != null){
+            last = last.next;
+        }
+        last.next = node;
+        node.prev = last;
+        size++;
+    }
+   
 
     public void display (){
         Node temp = head;
-        Node last = null;
+        // Node last = null;
         for (int i = 0; i < size; i++) {
             System.out.print(temp.value + " -> ");
-            last = temp; // keep pointing the temp first, until it becomes the null.
+            // last = temp; // keep pointing the temp first, until it becomes the null.
             temp = temp.next;
             
         }
