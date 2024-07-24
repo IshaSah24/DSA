@@ -134,4 +134,38 @@ public class Doubly {
 
         System.out.println("START");
     }
+
+
+
+    public Node find(int val){
+        Node temp  = head;
+        while (temp != null){
+            if (temp. value == val){
+                return temp;
+            }
+            temp = temp.next;
+        }
+        return null;
+    }
+
+    public void addAfter(int val, int newVal){
+        Node pre = find(val);
+
+        if (pre == null){
+            System.out.println("Does not present any node with value :"+ val);
+            return;
+        }
+
+        Node node =  new Node(newVal);
+        node.next = pre.next;
+        node.prev = pre;
+
+        if (node.next != null){
+            node.next.prev = node;
+        }
+
+        pre.next= node;
+        size++;
+        display();
+    }
 }

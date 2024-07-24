@@ -17,5 +17,6 @@ public class Main {
         a.insertAtLast(140);
         a.display();
         System.out.println("The size is : "+a.size);
+        a.addAfter(15, 50);  //Adding a node after a specified node's value..
     }
 }
