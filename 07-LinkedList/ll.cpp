@@ -1,6 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
+
+// Q. take an  array  and  make linked list of it
+
 struct Node {
     int data;
     Node* next;
@@ -33,6 +37,7 @@ void printLL(Node* head) {
     cout << "NULL" << endl;
 }
 
+
 int main() {
     int arr[] = {1, 2, 4, 6, 8};
     int n = sizeof(arr) / sizeof(arr[0]);
@@ -46,14 +51,12 @@ int main() {
 
 
 
-
-
-so  linked list  is DS which  can  hold data and a pointer combination  of these  two is actually called  as  "node",  to  hold this  type of data with  pointer  we  cannot  use regular  datatypes  like int  float etc,  so here  we  use self defined data type called as  "Node" with  using  struct similar  to  class.
+/* so  linked list  is DS which  can  hold data and a pointer combination  of these  two is actually called  as  "node",  to  hold this  type of data with  pointer  we  cannot  use regular  datatypes  like int  float etc,  so here  we  use self defined data type called as  "Node" with  using  struct similar  to  class.
 
 Advantages :
 
 	Dynamic memory allocation:
 	Since linked lists use new keyword, nodes are stored in heap memory.
 	
-	Linked list allows O(1) insert/delete at beginning (if head is known).
+	Linked list allows O(1) insert/delete at beginning (if head is known).  */
 
