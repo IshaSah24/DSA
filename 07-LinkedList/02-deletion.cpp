@@ -81,41 +81,10 @@ Node * removeVal(Node* head, int  val){
 
 		delete(tempToDel);
 	}
-
-
-
 	return head;
 }
 
 
-Node* insertNode (Node* head, int  val, int pos){
-	if (head == NULL && pos == 1){
-		return new Node(val);
-	}
-	if (pos == 1){
-		Node* temp = new Node(val, head);
-		return temp;
-	}
-
-	int count = 1;
-	Node* prev = head;
-	while (count < pos-1){
-		count++;
-		prev = prev->next;
-
-		if (prev == NULL) {
-			cout << "Invalid Index" << endl;
-			return NULL;
-		}
-	}
-
-	Node* cur = new Node(val);
-	cur -> next = prev -> next;
-	prev -> next = cur;
-
-	return head;
-
-}
 
 int main (){
 	int arr [] = {12,34,56,78,98};
@@ -134,13 +103,9 @@ int main (){
 	headptr = removeVal(headptr, 98);
 	print(headptr);
 
-	cout << "Inserting Node : ";
-	Node* isNotNull = insertNode(headptr, 100, 2);
-	if (isNotNull != NULL){
-		headptr = isNotNull;
-		print(headptr);
-	}
 	return 0;
+
+
 	// cout << headptr->data << endl
 
 
