@@ -1,3 +1,15 @@
+// Erlier bug  :  Node *deletePos(Node* delPtr) i was directly returning the delptr for  every  cases  like  :
+
+// case 1 : if  the delptr is head  then  i was  returning the new head "temp"  by  making another node  type after deleting the head.
+
+// case 2 (BUG) : if the head  is  tail  then i had no way  of returning the  new head  after  deleting the  tail(delptr)
+// case 3(BUG) : if the  delptr  is the middle node b/w  two  nodes here  i  can't  return  the head too and  it  doesn't even make  any  sense to  return the nullptr/NULL/delPtr
+
+// Solution  :  taking the actual  head  parameter to  return  the head after  deleting the middle, last  Nodes
+
+// 	example :
+// 		Node *deletePos(Node* head, Node *delPtr) 
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -87,17 +99,3 @@ int main() {
 		// cout << headptr<< endl;
 		printDL(headptr, output);
 }
-
-
-
-// Erlier bug  :  Node *deletePos(Node* delPtr) i was directly returning the delptr for  every  cases  like  :
-
-// case 1 : if  the delptr is head  then  i was  returning the new head "temp"  by  making another node  type after deleting the head.
-
-// case 2 (BUG) : if the head  is  tail  then i had no way  of returning the  new head  after  deleting the  tail(delptr)
-// case 3(BUG) : if the  delptr  is the middle node b/w  two  nodes here  i  can't  return  the head too and  it  doesn't even make  any  sense to  return the nullptr/NULL/delPtr
-
-// Solution  :  taking the actual  head  parameter to  return  the head after  deleting the middle, last  Nodes
-
-// 	example :
-// 		Node *deletePos(Node* head, Node *delPtr) {
