@@ -1,0 +1,3 @@
+Initial Node : 12 -> 34 -> 56 -> 78 -> 98 -> NULL
+Removing Node : 12 -> 34 -> 56 -> 98 -> NULL
+Removing Value : 12 -> 34 -> 56 -> NULL
