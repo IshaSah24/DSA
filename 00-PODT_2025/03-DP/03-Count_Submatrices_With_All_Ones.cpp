@@ -1,7 +1,6 @@
 class Solution {
 	public:
 	
-	
 	int oneDcal(vector<int> vec){
 		int count= 0;
 		int subArr=0;
