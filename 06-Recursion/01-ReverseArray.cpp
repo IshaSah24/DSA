@@ -1,7 +1,7 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-void reverseArray(int i, int arr[], int n) {
+void reverseArray(int i, vector <int>& arr, int n) {
     if (i >= n / 2) {
         return;
     }
@@ -9,7 +9,7 @@ void reverseArray(int i, int arr[], int n) {
     reverseArray(i + 1, arr, n);
 }
 
-void printArray(int arr[], int size) {
+void printArray(vector<int> & arr, int size) {
     for (int i = 0; i < size; i++) {
         cout << arr[i] << " ";
     }
@@ -19,21 +19,16 @@ void printArray(int arr[], int size) {
 
 
 int main() {
-    int size;
-    cin >> size;
 
-    int arr[size];
+    vector <int> arr  = {2,4,7,2,6,8};
+    int  n = arr.size(); 
 
-    for (int i = 0; i < size; i++) {
-        cin >> arr[i];
-    }
-
-    reverseArray(0, arr, size);  
-    printArray(arr, size);       // Print reversed array
+    reverseArray(0, arr, n);  
+    printArray(arr, n);       // Print reversed array
 
     return 0;
 }
 
 
 
-NOTE  : 
+// NOTE  : 
