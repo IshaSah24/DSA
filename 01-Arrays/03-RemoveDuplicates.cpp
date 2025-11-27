@@ -15,7 +15,7 @@ int main (){
     
     // cout  << "hello "<< endl;
 
-    vector  <int> arr = {1,1,2,2,2,3,3,6,7,9};
+    vector  <int> arr = {1,1,2,2,2,3,3,6,7,9,7,7,7,7};
 
    int index = removeDuplicate(arr, arr.size()); 
    cout <<  index <<  endl ;
